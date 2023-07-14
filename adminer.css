@@ -55,7 +55,7 @@ By Lucas Sandery https://github.com/lucas-sandery/adminer
     --back-button-high: var(--accent2);
     --back-button-disabled: #bdbdbd;
     --text-button: #fff;
-    
+
     --back-panel: #ffffff80;
 
     --back-table: #fff;
@@ -253,7 +253,7 @@ input[type="file"]:focus::-webkit-file-upload-button {
 }
 
 input[type="file"]:hover::-moz-file-upload-button,
-input[type="file"]:focus::-moz-file-upload-button {	
+input[type="file"]:focus::-moz-file-upload-button {
     color: var(--text-button);
 	background: var(--back-button-high);
 	text-decoration: none;
@@ -453,7 +453,7 @@ input.required {
 h1 {
     font-size: 1.5rem;
 	background: var(--back-title);
-	color: var(--text-heading); 
+	color: var(--text-heading);
     margin: 0 0 1em -20px;
 	padding: 2em 20px 0.5em 4rem;
 	border-bottom-style: none;
@@ -462,7 +462,7 @@ h1 {
     background-size: 2.5rem;
     background-repeat: no-repeat;
     background-image: url("data:image/svg+xml,%3Csvg%20width%3D%22550%22%20height%3D%22460%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22b%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h550v460H0z%22%2F%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url%28%23b%29%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%232196F3%22%20fill-opacity%3D%220%22%2F%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M310%20141c-7-28-59-55-149-55-91%200-143%2027-150%2055l-1%203v250l3%206c12%2026%2063%2049%20148%2049%2084%200%20135-23%20147-49%202-1%203-4%203-6V144l-1-3zm-15%20166c0%2021-55%2045-134%2045-80%200-135-24-135-45v-52c22%2018%2068%2033%20135%2033%2066%200%20112-15%20134-33v52zm0-80c0%2021-55%2045-134%2045-80%200-135-24-135-45v-52c22%2018%2068%2033%20135%2033%2066%200%20112-15%20134-33v52zM161%20102c79%200%20134%2024%20134%2045%200%2022-55%2045-134%2045-80%200-135-23-135-45%200-21%2055-45%20135-45zm0%20332c-80%200-135-24-135-46v-54c22%2019%2068%2034%20135%2034%2066%200%20112-15%20134-34v54c0%2022-55%2046-134%2046z%22%20fill%3D%22%232196F3%22%2F%3E%3Cg%20fill%3D%22%23FF5722%22%3E%3Cpath%20d%3D%22M401%20163l-71-59%2071-60%2017%2016-52%2043%2052%2044-17%2016zM540%2058c0%206-1%2011-3%2016-1%204-4%208-7%2012l-12%208c-5%202-10%204-16%204l-1%2020h-22l-2-39h15l9-2c3-1%205-2%206-4l4-6a22%2022%200%2000-1-16l-7-8-12-5-17-2h-6V12h7c11%200%2021%201%2029%204%208%202%2014%206%2020%2010%205%204%209%209%2012%2015%203%205%204%2011%204%2017zm-33%2089l-1%206-4%205a17%2017%200%2001-12%205%2017%2017%200%2001-16-10l-1-6%201-7a18%2018%200%20019-9l7-1a17%2017%200%200116%2010l1%207z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-
+	margin-top: -27px;
 }
 
 #h1 {
@@ -664,6 +664,9 @@ form > p {
 	flex: 0 0 20em;
 	max-width: 20em;
 	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	max-height: 100vh;
 }
 
 #menu,
@@ -757,7 +760,7 @@ form > p {
 }
 #logins:hover,
 #tables:hover {
-	overflow: visible !important;
+	overflow: auto !important;
 }
 #logins li,
 #tables li {
@@ -770,12 +773,6 @@ form > p {
     background: none;
 	color: var(--text-button);
 	padding: 0.2em 0.3em 0.3em;
-}
-.rtl #logins a,
-.rtl #tables a,
-.rtl #tables span {
-	/* padding-left: 0.4em; */
-	/* padding-right: 0; */
 }
 
 #logins {
@@ -967,7 +964,6 @@ thead a:visited:focus {
 
 
 .js .column {
-    display: none;
 	z-index: 1;
 	background: transparent;
 	padding: 0;
@@ -1019,7 +1015,6 @@ tbody tr:nth-child(n):hover th,
 }
 
 .icon {
-	height: 0;
 	padding-top: 1.2em;
 	width: 1.2em;
 	background: var(--back-button) center no-repeat;
